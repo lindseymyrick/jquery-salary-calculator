@@ -1,3 +1,22 @@
+HTML
+[x] create 5 inputs + 1 submit button
+[x] create table
+[x]create total output
+
+JS 
+[] function that runs the entire process 
+[x] function that when submit button is clicked, val method should grab information and store in an object
+    [x] create array to store info
+    [x] create empty object to store infor
+    [x] create global variable that stores  salary divided by 12 
+    [x] clear input fields using empty method 
+[] function that appends information to table in the DOM
+[x] function that takes global variable with monthly cost and adds to a total monthly cost 
+[x] function if total monthly cost exceeds 20, add a red background color
+[] function if delete button is pushed, removes employee from DOM
+
+[] conditional, 
+
 # Weekend Challenge: jQuery Salary Calculator
 Create an application that records employee salaries and adds salaries up to report monthly costs. 
 

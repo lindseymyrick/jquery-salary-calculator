@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" class="ml-3">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Vendors/bootstrap.css">
+    <link rel="stylesheet" href="./Styles/styles.css">
+    <script src="./Vendors/jquery-3.4.1.min.js"> </script>
+    <script src="./Scripts/client.js"></script>
+    <title>Salary Calculator</title>
+</head>
+<body>
+<header>
+    <h1 class="mb-4"> Salary Calculator</h1>
+</header>
+
+<div id="addEmployee" class="mb-4"> 
+    <h3>Add Employee</h3>
+        <input type="text" id="firstNameInput" class="employeeInput" placeholder="First Name">
+        <input type="text" id="lastNameInput" class="employeeInput" placeholder="Last Name">
+        <input type="number" id="idInput" class="employeeInput" placeholder="ID Number">
+        <input type="text" id="titleInput" class="employeeInput" placeholder="Title">
+        <input type="number" id="salaryInput" class="employeeInput" placeholder="Annual Salary">
+        <button type="submit" id="submitButton"> Submit </button>
+
+</div>
+
+<div id="employeeTable" class="mb-5">
+    <caption><h3>List of Employees </h3></caption>
+    <table class ="table table-bordered">
+      <tbody>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Annual Salary</th>
+            <th> </th>
+        </tr>
+      </tbody>
+    </table>
+
+</div>
+
+<div id="totalMonthlySalary">
+<p> Total Monthly: <span id="monthlyNumber"> </span> </p> 
+
+</div>
+    
+</body>
+</html>
