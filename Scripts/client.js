@@ -4,9 +4,9 @@ let employeeList = [];
 let totalMonthlySalary = 0; 
 
 function readyNow() {
-   //hey Jquery, when the submit button is clicked, run this function
+   // When the submit button is clicked, run this function
     $('#submitButton').on('click', createEmployeeInfo); 
-   //hey Jquery, when something on the employee table is clicked, run this function 
+   //When something on the employee table is clicked, run this function 
     $('#employeeTable').delegate('.deleteButton','click' , deleteEmployee );
 }
 
@@ -35,22 +35,27 @@ function createEmployeeInfo() {
     if(totalMonthlySalary > 20000) {
         $('#totalMonthlySalary').css("background-color", "red");
     }
+    //add employee info to DOM
     let buttonDelete = ('<button class="deleteButton">Delete</button>');
     let tr1 = $(` <tr class="trDynamic"> <td> ${employeeToAdd.firstName}</td> <td>${employeeToAdd.lastName} </td> <td> <div class="idNumbers"> ${employeeToAdd.id} </div> </td> <td> ${employeeToAdd.title} </td> <td> ${employeeToAdd.salary} </td>  <td> ${buttonDelete} </td> </tr>`);
     $("table tbody").append(tr1);
-    console.log(tr1); 
-    //addToDom(); 
-
-    //append employee info to DOM and add delete button
-    // let buttonDelete = ('<button id="deleteButton">Delete</button>');
-    // let tr1 = $(` <tr> <td> ${employeeToAdd.firstName}</td> <td>${employeeToAdd.lastName} </td> <td> ${employeeToAdd.id} </td> <td> ${employeeToAdd.title} </td> <td> ${employeeToAdd.salary} </td>  <td> ${buttonDelete} </td> </tr>`);
-    // $("table tbody").append(tr1);
-    // console.log(tr1);    
-
-    
+    console.log(tr1);   
 
  } //end createEmployeeInfo
 
+
+
+function deleteEmployee() {
+   //delete employee info in DOM
+    console.log('in deleteEmployee'); 
+    $(this).closest('.trDynamic').remove();
+   
+}
+
+
+console.log('javascript working!');
+
+//IGNORE CODE BELOW. Tracking code that eventually was not used 
 //  function addToDom() {
 //      //create delete button
 //     let buttonDelete = ('<button class="deleteButton">Delete</button>');
@@ -67,25 +72,9 @@ function createEmployeeInfo() {
 
 //  } //end addToDom
 
-
-function deleteEmployee() {
-    console.log('in deleteEmployee'); 
-    $(this).closest('.trDynamic').remove();
-   
-   
-    
-   // $(this).closest('.trDynamic').remove();
-}
-
-    
-
-    //append employee info record 
-// let buttonDelete = ('<button id="deleteButton">Delete</button>');
-// let tr1 = $(` <tr> <td> ${employeeToAdd.firstName}</td> <td>${employeeToAdd.lastName} </td> <td> ${employeeToAdd.id} </td> <td> ${employeeToAdd.title} </td> <td> ${employeeToAdd.salary} </td>  <td> ${buttonDelete} </td> </tr>`);
-// $("table tbody").append(tr1);
-// console.log(tr1); 
-
-
-
-console.log('javascript working!');
+ //append employee info to DOM and add delete button
+    // let buttonDelete = ('<button id="deleteButton">Delete</button>');
+    // let tr1 = $(` <tr> <td> ${employeeToAdd.firstName}</td> <td>${employeeToAdd.lastName} </td> <td> ${employeeToAdd.id} </td> <td> ${employeeToAdd.title} </td> <td> ${employeeToAdd.salary} </td>  <td> ${buttonDelete} </td> </tr>`);
+    // $("table tbody").append(tr1);
+    // console.log(tr1);    
 

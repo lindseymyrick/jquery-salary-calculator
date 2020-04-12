@@ -1,9 +1,9 @@
-# Project Name
+Salary Calculator
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+Description
 
-## Description
+Duration: 3 days
 
-Your project description goes here. What problem did you solve? How did you solve it?
+Client requested a program that would allow them to more effectivley track if employee salaries were within budget. The salary calculator allows the client to add all relevant information (name, ID, title, and salary) and dynamically remove when said employee information is irrelevant. Additionally, if the total salary information is higher than the pre-set budget, the program warns the client by highlighting the information in red. 
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+
